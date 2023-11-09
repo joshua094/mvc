@@ -30,6 +30,7 @@ app.use(passport.initialize());
 app.use(passport.session());
 //Routes
 app.use("/", require("./routes/login"));
+app.use('/healthcheck', require('./routes/healthchecker'));
 
 const PORT = process.env.PORT || 4111;
 
